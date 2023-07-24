@@ -1,1 +1,1 @@
-# wot-project-BE-ErikaNoccoPatrykSkorupski
+# wot-project-BESpringboot-SkorupskiNocco
