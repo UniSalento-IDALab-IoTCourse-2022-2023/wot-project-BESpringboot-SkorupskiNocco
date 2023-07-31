@@ -1,6 +1,7 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.controller;
 
 import com.unisalento.hospitalmaps.HospitalMapsBE.model.Beacon;
+import com.unisalento.hospitalmaps.HospitalMapsBE.model.BeaconInput;
 import com.unisalento.hospitalmaps.HospitalMapsBE.model.MessaggioRisposta;
 import com.unisalento.hospitalmaps.HospitalMapsBE.model.RispostaGetBeacon;
 import com.unisalento.hospitalmaps.HospitalMapsBE.services.AdministratorService;
@@ -20,7 +21,7 @@ public class AdministratorController {
 
     @PostMapping(path = "/nuovoBeacon", produces = MediaType.APPLICATION_JSON_VALUE)
     public MessaggioRisposta postBeacon(
-            @RequestBody Beacon beacon
+            @RequestBody BeaconInput beacon
             ){
         return service.postBeacon(beacon);
     }

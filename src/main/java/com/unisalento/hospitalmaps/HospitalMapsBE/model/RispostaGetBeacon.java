@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class RispostaGetBeacon {
     private String uuid;
-    private String idStanza;
     private String stanza;
+    private String reparto;
 }
