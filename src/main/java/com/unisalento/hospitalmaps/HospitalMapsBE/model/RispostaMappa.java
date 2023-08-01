@@ -13,11 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeaconInput {
-    String beaconUUID;
-    String idOspedale;
-    String nomeStanze;
-    int piano;
-    String reparto;
-    List<BeaconVicino> vicini;
+public class RispostaMappa {
+    Double gradiPartenza;
+    List<Direzione> mappa;
 }

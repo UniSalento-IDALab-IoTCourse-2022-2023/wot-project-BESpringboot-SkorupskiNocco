@@ -1,6 +1,5 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.model;
 
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.enums.Direzioni;
 import lombok.*;
 
 import java.util.List;

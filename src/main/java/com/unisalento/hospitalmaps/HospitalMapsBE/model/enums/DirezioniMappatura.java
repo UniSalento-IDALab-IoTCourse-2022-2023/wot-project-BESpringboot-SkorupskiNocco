@@ -1,6 +1,6 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.model.enums;
 
-public enum Direzioni {
+public enum DirezioniMappatura {
     FRONTE,
     RETRO,
     DESTRA,

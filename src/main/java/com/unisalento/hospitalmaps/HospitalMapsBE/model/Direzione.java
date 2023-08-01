@@ -1,5 +1,6 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.model;
 
+import com.unisalento.hospitalmaps.HospitalMapsBE.model.enums.DirezioniPercorso;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,11 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeaconInput {
+public class Direzione {
     String beaconUUID;
-    String idOspedale;
-    String nomeStanze;
-    int piano;
-    String reparto;
-    List<BeaconVicino> vicini;
+    DirezioniPercorso nord;
+    DirezioniPercorso sud;
+    DirezioniPercorso est;
+    DirezioniPercorso ovest;
+    int posizione;
 }
