@@ -1,9 +1,6 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.controller;
 
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.Beacon;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.BeaconInput;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.MessaggioRisposta;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.RispostaGetBeacon;
+import com.unisalento.hospitalmaps.HospitalMapsBE.model.*;
 import com.unisalento.hospitalmaps.HospitalMapsBE.services.AdministratorService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +43,13 @@ public class AdministratorController {
             @PathVariable String uuidBeacon
     ){
         return service.getListaBeacon(idOspedale,uuidBeacon);
+    }
+
+    @PostMapping(path = "/nuoveCoordinate", produces = MediaType.APPLICATION_JSON_VALUE)
+    public MessaggioRisposta postCoordinate(
+            @RequestBody CoordinateOspedale coordinateOspedale
+    ){
+        return service.postCoordinate(coordinateOspedale);
     }
 
 

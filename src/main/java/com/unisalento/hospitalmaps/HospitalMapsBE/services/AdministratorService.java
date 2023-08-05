@@ -1,10 +1,8 @@
 package com.unisalento.hospitalmaps.HospitalMapsBE.services;
 
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.Beacon;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.BeaconInput;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.MessaggioRisposta;
-import com.unisalento.hospitalmaps.HospitalMapsBE.model.RispostaGetBeacon;
+import com.unisalento.hospitalmaps.HospitalMapsBE.model.*;
 import com.unisalento.hospitalmaps.HospitalMapsBE.repository.BeaconRepository;
+import com.unisalento.hospitalmaps.HospitalMapsBE.repository.CoordinateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +15,8 @@ import java.util.stream.Collectors;
 public class AdministratorService {
     @Autowired
     BeaconRepository beaconRepository;
+    @Autowired
+    CoordinateRepository coordinateRepository;
 
     public MessaggioRisposta postBeacon(BeaconInput beaconInput){
         Beacon beacon = new Beacon();
@@ -82,4 +82,16 @@ public class AdministratorService {
             return new MessaggioRisposta("Si è verificato un errore durante la mappatura, riprovare" , false);
         }
     }
+
+    public MessaggioRisposta postCoordinate(CoordinateOspedale coordinateOspedale){
+        if(coordinateOspedale.getCoordinataIniziale() == null || coordinateOspedale.getCoordinataIniziale() > 360.0 || coordinateOspedale.getCoordinataIniziale() < 0.0){
+            return new MessaggioRisposta("Errore durante il rilevamento delle coordinate, riprovare!",false);
+        }else if(coordinateOspedale.getIdOspedale() == null){
+            return new MessaggioRisposta("Errore, l'id dell'ospedale è nullo!",false);
+        }else{
+            coordinateRepository.save(coordinateOspedale);
+            return new MessaggioRisposta("Coordinate salvate con successo!",true);
+        }
+    }
+
 }
