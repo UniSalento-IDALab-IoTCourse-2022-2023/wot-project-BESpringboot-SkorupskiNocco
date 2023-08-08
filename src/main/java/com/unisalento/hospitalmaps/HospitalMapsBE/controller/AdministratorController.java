@@ -52,5 +52,11 @@ public class AdministratorController {
         return service.postCoordinate(coordinateOspedale);
     }
 
+    @PostMapping(path = "/beaconMappatoDisabili", produces = MediaType.APPLICATION_JSON_VALUE)
+    public MessaggioRisposta postBeaconMappatoDisabili(
+            @RequestBody Beacon beacon
+    ){
+        return service.postBeaconMappatoDisabili(beacon);
+    }
 
 }

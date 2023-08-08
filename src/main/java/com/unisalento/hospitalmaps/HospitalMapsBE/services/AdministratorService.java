@@ -94,4 +94,18 @@ public class AdministratorService {
         }
     }
 
+    public MessaggioRisposta postBeaconMappatoDisabili(Beacon beaconMappato){
+        Beacon beaconSaved = beaconRepository.findById(beaconMappato.getBeaconUUID()).orElse(null);
+        if(beaconSaved == null) {
+            return new MessaggioRisposta("Si è verificato un errore durante la mappatura, riprovare", false);
+        }
+        beaconSaved.setViciniPerDisabili(beaconMappato.getViciniPerDisabili());
+        beaconSaved = beaconRepository.save(beaconSaved);
+        if(beaconSaved != null){
+            return new MessaggioRisposta("Il beacon con UUID: " + beaconSaved.getBeaconUUID() + " è stato mappato correttamente.", true);
+        } else{
+            return new MessaggioRisposta("Si è verificato un errore durante la mappatura, riprovare" , false);
+        }
+    }
+
 }

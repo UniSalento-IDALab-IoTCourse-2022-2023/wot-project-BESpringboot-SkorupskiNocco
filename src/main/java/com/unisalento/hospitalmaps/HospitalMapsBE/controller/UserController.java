@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @GetMapping(path = "/reparti/{idOspedale}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<String> getReparti(
+    public List<Reparto> getReparti(
             @PathVariable String idOspedale
     ){
         return service.getRepartiByIdOspedale(idOspedale);
@@ -44,6 +44,14 @@ public class UserController {
             @PathVariable String nomeReparto
     ){
         return service.getStanzeByIdOspedaleAndReparto(idOspedale,nomeReparto);
+    }
+
+    @PostMapping(path = "/ottieniPercorsoDisabili/{idOspedale}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public RispostaMappa postOttieniPercorsoDisabili(
+            @RequestBody RichiestaPercorso richiestaPercorso,
+            @PathVariable String idOspedale
+    ){
+        return service.postOttieniPercorsoDisabili(richiestaPercorso, idOspedale);
     }
 
 

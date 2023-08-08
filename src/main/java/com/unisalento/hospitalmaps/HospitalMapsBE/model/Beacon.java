@@ -20,4 +20,5 @@ public class Beacon {
     int piano;
     String reparto;
     List<BeaconVicino> vicini;
+    List<BeaconVicino> viciniPerDisabili;
 }
