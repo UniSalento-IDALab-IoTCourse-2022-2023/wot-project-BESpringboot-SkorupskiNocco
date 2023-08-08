@@ -39,7 +39,7 @@ public class UserController {
     }
 
     @GetMapping(path = "/stanze/{idOspedale}/{nomeReparto}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<String> getStanzeByReparto(
+    public List<Stanza> getStanzeByReparto(
             @PathVariable String idOspedale,
             @PathVariable String nomeReparto
     ){

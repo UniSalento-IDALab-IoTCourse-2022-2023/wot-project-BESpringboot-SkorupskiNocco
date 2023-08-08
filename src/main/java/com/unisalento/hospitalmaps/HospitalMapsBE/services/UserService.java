@@ -279,20 +279,21 @@ public class UserService {
         return reparti;
     }
 
-    public List<String> getStanzeByIdOspedaleAndReparto(String idOspedale, String nomeReparto) {
+    public List<Stanza> getStanzeByIdOspedaleAndReparto(String idOspedale, String nomeReparto) {
         List<Beacon> beaconList = beaconRepository.findBeaconByIdOspedale(idOspedale);
-        List<String> stanze = new ArrayList<>();
+        List<Stanza> stanze = new ArrayList<>();
         for (Beacon beacon : beaconList) {
             if (beacon.getReparto().equals(nomeReparto)) {
                 boolean presente = false;
                 for(int j = 0; j < beacon.getNomiStanze().size(); j++) {
                     for (int i = 0; i < stanze.size(); i++) {
-                        if (beacon.getNomiStanze().get(j).equals(stanze.get(i))) {
+                        if (beacon.getNomiStanze().get(j).equals(stanze.get(i).getNomeStanza())) {
                             presente = true;
                         }
                     }
                     if (presente == false) {
-                        stanze.add(beacon.getNomiStanze().get(j));
+                        Stanza stanza = new Stanza(beacon.getNomiStanze().get(j));
+                        stanze.add(stanza);
                     }
                 }
             }
