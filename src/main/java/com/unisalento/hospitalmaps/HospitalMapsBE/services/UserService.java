@@ -335,14 +335,14 @@ public class UserService {
             DirezioniMappatura direzioniMappaturaPrecedente = DirezioniMappatura.FRONTE;
             DirezioniMappatura direzioniMappaturaSuccessivo = DirezioniMappatura.FRONTE;
 
-            for(BeaconVicino beaconVicino : precedente.getVicini()){
-                if(beaconVicino.getBeaconUUID().equals(successivo.getBeaconUUID())){
+            for(BeaconVicino beaconVicino : precedente.getViciniPerDisabili()){
+                if(beaconVicino.getBeaconUUID().equalsIgnoreCase(successivo.getBeaconUUID())){
                     direzioniMappaturaPrecedente = beaconVicino.getDirezione();
                     break;
                 }
             }
 
-            for(BeaconVicino beaconVicino : successivo.getVicini()){
+            for(BeaconVicino beaconVicino : successivo.getViciniPerDisabili()){
                 if(beaconVicino.getBeaconUUID().equals(precedente.getBeaconUUID())){
                     direzioniMappaturaSuccessivo = beaconVicino.getDirezione();
                     break;
