@@ -336,7 +336,7 @@ public class UserService {
             DirezioniMappatura direzioniMappaturaSuccessivo = DirezioniMappatura.FRONTE;
 
             for(BeaconVicino beaconVicino : precedente.getViciniPerDisabili()){
-                if(beaconVicino.getBeaconUUID().equalsIgnoreCase(successivo.getBeaconUUID())){
+                if(beaconVicino.getBeaconUUID().equals(successivo.getBeaconUUID())){
                     direzioniMappaturaPrecedente = beaconVicino.getDirezione();
                     break;
                 }
