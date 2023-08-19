@@ -158,6 +158,11 @@ public class UserService {
             if(beacon.getReparto().equals(richiestaPercorso.getRepartoArrivo())){
                 for(String stanza : beacon.getNomiStanze()){
                     if(stanza.equals(richiestaPercorso.getStanzaArrivo())){
+                        if(beacon.getBeaconUUID().equals(richiestaPercorso.getUuidPartenza())){
+                            List<Beacon> beacons = new ArrayList<>();
+                            beacons.add(beacon);
+                            return beacons;
+                        }
                         return djjkstraPercorso(beaconList, richiestaPercorso.getUuidPartenza(), beacon.getBeaconUUID());
 
                     }
@@ -482,6 +487,11 @@ public class UserService {
             if(beacon.getReparto().equals(richiestaPercorso.getRepartoArrivo())){
                 for(String stanza : beacon.getNomiStanze()){
                     if(stanza.equals(richiestaPercorso.getStanzaArrivo())){
+                        if(beacon.getBeaconUUID().equals(richiestaPercorso.getUuidPartenza())){
+                            List<Beacon> beacons = new ArrayList<>();
+                            beacons.add(beacon);
+                            return beacons;
+                        }
                         return djjkstraPercorsoDisabili(beaconList, richiestaPercorso.getUuidPartenza(), beacon.getBeaconUUID());
 
                     }
