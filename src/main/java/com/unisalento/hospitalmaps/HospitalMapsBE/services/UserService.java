@@ -100,43 +100,43 @@ public class UserService {
                 direzione.setSud(DirezioniPercorso.SINISTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.FRONTE) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.SINISTRA)){
                 direzione.setNord(DirezioniPercorso.DRITTO_DESTRA);
-                direzione.setOvest(DirezioniPercorso.DESTRA);
-                direzione.setEst(DirezioniPercorso.DRITTO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_SINISTRA);
                 direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
-                direzione.setNord(DirezioniPercorso.SINISTRA);
+                direzione.setNord(DirezioniPercorso.DIETRO);
                 direzione.setOvest(DirezioniPercorso.DRITTO_SINISTRA);
-                direzione.setEst(DirezioniPercorso.DIETRO);
-                direzione.setSud(DirezioniPercorso.DRITTO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
-                direzione.setNord(DirezioniPercorso.DRITTO);
+                direzione.setNord(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setOvest(DirezioniPercorso.DIETRO);
                 direzione.setEst(DirezioniPercorso.DRITTO_SINISTRA);
                 direzione.setSud(DirezioniPercorso.SINISTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.RETRO) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.DESTRA)){
                 direzione.setNord(DirezioniPercorso.DIETRO);
-                direzione.setOvest(DirezioniPercorso.DRITTO);
-                direzione.setEst(DirezioniPercorso.DESTRA);
+                direzione.setOvest(DirezioniPercorso.DRITTO_SINISTRA);
+                direzione.setEst(DirezioniPercorso.DIETRO);
                 direzione.setSud(DirezioniPercorso.DRITTO_DESTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.FRONTE) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.DESTRA)){
                 direzione.setNord(DirezioniPercorso.DRITTO_SINISTRA);
-                direzione.setOvest(DirezioniPercorso.DRITTO);
-                direzione.setEst(DirezioniPercorso.SINISTRA);
-                direzione.setSud(DirezioniPercorso.DIETRO);
-            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
-                direzione.setNord(DirezioniPercorso.DESTRA);
-                direzione.setOvest(DirezioniPercorso.DIETRO);
-                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
-                direzione.setSud(DirezioniPercorso.DRITTO);
-            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
-                direzione.setNord(DirezioniPercorso.DRITTO);
                 direzione.setOvest(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setEst(DirezioniPercorso.DIETRO);
-                direzione.setSud(DirezioniPercorso.DESTRA);
+                direzione.setSud(DirezioniPercorso.DIETRO);
+            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
+                direzione.setNord(DirezioniPercorso.DIETRO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setSud(DirezioniPercorso.DRITTO_SINISTRA);
+            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
+                direzione.setNord(DirezioniPercorso.DRITTO_SINISTRA);
+                direzione.setOvest(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setEst(DirezioniPercorso.DIETRO);
+                direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.RETRO) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.SINISTRA)){
                 direzione.setNord(DirezioniPercorso.DIETRO);
-                direzione.setOvest(DirezioniPercorso.SINISTRA);
-                direzione.setEst(DirezioniPercorso.DRITTO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setSud(DirezioniPercorso.DRITTO_SINISTRA);
             }
             rispostaMappa.getMappa().add(direzione);
@@ -385,43 +385,43 @@ public class UserService {
                 direzione.setSud(DirezioniPercorso.SINISTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.FRONTE) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.SINISTRA)){
                 direzione.setNord(DirezioniPercorso.DRITTO_DESTRA);
-                direzione.setOvest(DirezioniPercorso.DESTRA);
-                direzione.setEst(DirezioniPercorso.DRITTO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_SINISTRA);
                 direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
-                direzione.setNord(DirezioniPercorso.SINISTRA);
+                direzione.setNord(DirezioniPercorso.DIETRO);
                 direzione.setOvest(DirezioniPercorso.DRITTO_SINISTRA);
-                direzione.setEst(DirezioniPercorso.DIETRO);
-                direzione.setSud(DirezioniPercorso.DRITTO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
-                direzione.setNord(DirezioniPercorso.DRITTO);
+                direzione.setNord(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setOvest(DirezioniPercorso.DIETRO);
                 direzione.setEst(DirezioniPercorso.DRITTO_SINISTRA);
                 direzione.setSud(DirezioniPercorso.SINISTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.RETRO) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.DESTRA)){
                 direzione.setNord(DirezioniPercorso.DIETRO);
-                direzione.setOvest(DirezioniPercorso.DRITTO);
-                direzione.setEst(DirezioniPercorso.DESTRA);
+                direzione.setOvest(DirezioniPercorso.DRITTO_SINISTRA);
+                direzione.setEst(DirezioniPercorso.DIETRO);
                 direzione.setSud(DirezioniPercorso.DRITTO_DESTRA);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.FRONTE) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.DESTRA)){
                 direzione.setNord(DirezioniPercorso.DRITTO_SINISTRA);
-                direzione.setOvest(DirezioniPercorso.DRITTO);
-                direzione.setEst(DirezioniPercorso.SINISTRA);
-                direzione.setSud(DirezioniPercorso.DIETRO);
-            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
-                direzione.setNord(DirezioniPercorso.DESTRA);
-                direzione.setOvest(DirezioniPercorso.DIETRO);
-                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
-                direzione.setSud(DirezioniPercorso.DRITTO);
-            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
-                direzione.setNord(DirezioniPercorso.DRITTO);
                 direzione.setOvest(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setEst(DirezioniPercorso.DIETRO);
-                direzione.setSud(DirezioniPercorso.DESTRA);
+                direzione.setSud(DirezioniPercorso.DIETRO);
+            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.DESTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.FRONTE)){
+                direzione.setNord(DirezioniPercorso.DIETRO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setSud(DirezioniPercorso.DRITTO_SINISTRA);
+            }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.SINISTRA) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.RETRO)){
+                direzione.setNord(DirezioniPercorso.DRITTO_SINISTRA);
+                direzione.setOvest(DirezioniPercorso.DRITTO_DESTRA);
+                direzione.setEst(DirezioniPercorso.DIETRO);
+                direzione.setSud(DirezioniPercorso.DIETRO);
             }else if(direzioniMappaturaPrecedente.equals(DirezioniMappatura.RETRO) && direzioniMappaturaSuccessivo.equals(DirezioniMappatura.SINISTRA)){
                 direzione.setNord(DirezioniPercorso.DIETRO);
-                direzione.setOvest(DirezioniPercorso.SINISTRA);
-                direzione.setEst(DirezioniPercorso.DRITTO);
+                direzione.setOvest(DirezioniPercorso.DIETRO);
+                direzione.setEst(DirezioniPercorso.DRITTO_DESTRA);
                 direzione.setSud(DirezioniPercorso.DRITTO_SINISTRA);
             }
             rispostaMappa.getMappa().add(direzione);
